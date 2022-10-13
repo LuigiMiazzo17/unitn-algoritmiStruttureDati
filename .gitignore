@@ -2,3 +2,4 @@
 *.un~
 .vscode/
 *.txt
+.DS_store
