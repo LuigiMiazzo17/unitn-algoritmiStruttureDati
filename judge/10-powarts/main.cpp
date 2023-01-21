@@ -5,6 +5,14 @@
 #include <stack>
 #include <utility>
 #include <vector>
+#include <iostream>
+
+#ifndef LOCAL
+std::ifstream _in("input.txt");
+std::ofstream _out("output.txt");
+#define cin _in
+#define cout _out
+#endif
 
 using namespace std;
 
@@ -175,9 +183,8 @@ struct wGraph {
 
 int main() {
 
-  ifstream in("input.txt");
   int N, M, P;
-  in >> N >> M >> P;
+  cin >> N >> M >> P;
 
   wGraph _graph;
 
@@ -186,20 +193,17 @@ int main() {
 
   for (int i = 0; i < M; i++) {
     int from, to, weight;
-    in >> from >> to >> weight;
+    cin >> from >> to >> weight;
     _graph.newEdge(from, to, weight);
   }
 
-  in.close();
 
   vector<int> r = _graph.wBFS(P);
   sort(r.begin(), r.end());
 
-  ofstream out("output.txt");
-  out << r.size() << endl;
+  cout << r.size() << endl;
   for (int i = 0; i < r.size(); i++)
-    out << r[i] << endl;
+    cout << r[i] << endl;
 
-  out.close();
   return 0;
 }
