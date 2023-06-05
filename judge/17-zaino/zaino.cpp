@@ -19,12 +19,12 @@ int main() {
   int C, N;
   cin >> C >> N;
 
-  std::vector<std::pair<int, __uint16_t>> weights;
-  std::vector<__uint16_t> prevRow;
-  std::vector<__uint16_t> currRow;
+  std::vector<std::pair<int, uint16_t>> weights;
+  std::vector<uint16_t> prevRow;
+  std::vector<uint16_t> currRow;
   for (int i = 0; i < N; i++) {
     int w;
-    __uint16_t v;
+    uint16_t v;
     cin >> w >> v;
     weights.push_back(std::make_pair(w, v));
   }
