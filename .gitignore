@@ -6,3 +6,4 @@
 .vscode/
 *.txt
 .DS_store
+*.svg
